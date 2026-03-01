@@ -1,0 +1,17 @@
+.item-card {
+  /* padding: 10px 15px; */
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease-in-out;
+}
+
+.item-title {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* אפקט קטן כשעוברים עם העכבר על השורה */
+.item-card:hover {
+  background-color: #f8f9fa;
+  padding-right: 20px; /* תזוזה קלה לימין */
+}

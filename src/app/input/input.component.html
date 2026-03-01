@@ -1,0 +1,8 @@
+<p>app-input</p>
+<input 
+  type="search" 
+  [(ngModel)]="searchValue"
+  (input)="handleInput()" 
+  [name]="name()"
+  [title]="'הקשת ' + searchValue().length + ' תווים'"
+/>

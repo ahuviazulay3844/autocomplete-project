@@ -1,0 +1,29 @@
+/* עיצוב המכולה הראשית */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  direction: rtl; /* יישור לימין */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fcfcfc;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* כותרת ראשית */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* קו מפריד עדין */
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  /* margin: 40px 0; */
+}

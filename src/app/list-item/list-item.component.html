@@ -1,0 +1,5 @@
+<p>app-list</p>
+<ul>
+  @for (singleItem of items(); track singleItem.id) {
+   <app-app-list-item [item]="singleItem"></app-app-list-item>
+  }
