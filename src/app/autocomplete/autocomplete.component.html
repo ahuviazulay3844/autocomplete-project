@@ -1,4 +1,6 @@
-<div [style.backgroundColor]="bgColor()">
-  <app-input [name]="'search-box'"></app-input>
-  <app-list-item [items]="data()"></app-list-item> 
+<div class="autocomplete-wrapper" [style.backgroundColor]="bgColor()">  <app-input 
+    [name]="inputName()" 
+    (search)="handleSearch($event)">
+  </app-input>
+  <app-list-item [items]="filteredList()"></app-list-item>
 </div>

@@ -1,8 +1,7 @@
-import { Component, input } from '@angular/core';
+import { Component, input, OnInit, signal } from '@angular/core';
 import { ListItemComponent } from '../list-item/list-item.component';
 import { InputComponent } from '../input/input.component';
 import { Item } from '../shared/item';
-import { AppListItemComponent } from "../app-list-item/app-list-item.component";
 
 @Component({
   selector: 'app-autocomplete',
@@ -11,7 +10,22 @@ import { AppListItemComponent } from "../app-list-item/app-list-item.component";
   templateUrl: './autocomplete.component.html',
   styleUrl: './autocomplete.component.css'
 })
-export class AutocompleteComponent {
-data=input.required<Item[]>();
-bgColor = input<string>('#ffffff');
+export class AutocompleteComponent implements OnInit {
+  data = input.required<Item[]>();
+  inputName = input.required<string>();
+  bgColor = input<string>('#ffffff');
+
+  filteredList = signal<Item[]>([]);
+
+  ngOnInit() {
+    this.filteredList.set(this.data());
+  }
+
+  handleSearch(searchTerm: string) {
+    const allItems = this.data();
+    const result = allItems.filter(item => 
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    this.filteredList.set(result);
+  }
 }

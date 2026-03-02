@@ -10,9 +10,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class InputComponent {
 name = input.required<string>();
-searchValue = model<string>('');
-onSearch = output<string>({ alias: 'search' });
-  handleInput() {
-    this.onSearch.emit(this.searchValue())
-}
+  searchValue = model<string>('');
+  onSearch = output<string>({ alias: 'search' });
+  onInputChange() {
+    this.onSearch.emit(this.searchValue());
+  }
 }

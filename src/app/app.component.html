@@ -1,10 +1,13 @@
-
 <div class="container">
-  <h1>app-autocomplete </h1>
+  <app-autocomplete 
+    [data]="countries" 
+    inputName="country-search">
+  </app-autocomplete>
 
-  <app-autocomplete [data]="countries" bgColor="#f9f9f9"></app-autocomplete>
-  
   <hr>
-  
-  <app-autocomplete [data]="colors"></app-autocomplete>
+
+  <app-autocomplete 
+    [data]="colors" 
+    inputName="color-selection">
+  </app-autocomplete>
 </div>

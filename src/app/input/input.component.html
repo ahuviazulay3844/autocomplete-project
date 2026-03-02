@@ -1,8 +1,8 @@
-<p>app-input</p>
 <input 
   type="search" 
-  [(ngModel)]="searchValue"
-  (input)="handleInput()" 
-  [name]="name()"
-  [title]="'הקשת ' + searchValue().length + ' תווים'"
+  autocomplete="off"
+  [name]="name()" 
+  [(ngModel)]="searchValue" 
+  (input)="onInputChange()"
+  [title]="'הקשת ' + searchValue().length + ' תווים'" 
 />
